@@ -1,0 +1,37 @@
+LICENSE   := GPLv3
+VERSION   := 0.3.0
+DOWNLOADS := ndn-cxx.git
+
+URL(ndn-cxx) := https://github.com/named-data/ndn-cxx.git
+REV(ndn-cxx) := 3b54e855980450677030240c9d83681d595c5643
+DIR(ndn-cxx) := src/lib/ndn-cxx
+
+DIRS := include/ndn-cxx
+DIR_CONTENT(include/ndn-cxx) := ${DIR(ndn-cxx)}/src/*.hpp
+
+DIRS += include/ndn-cxx/detail
+DIR_CONTENT(include/ndn-cxx/detail) := ${DIR(ndn-cxx)}/src/detail/*.hpp
+
+DIRS += include/ndn-cxx/encoding
+DIR_CONTENT(include/ndn-cxx/encoding) := ${DIR(ndn-cxx)}/src/encoding/*.hpp
+
+DIRS += include/ndn-cxx/encoding/cryptopp
+DIR_CONTENT(include/ndn-cxx/encoding/cryptopp) := ${DIR(ndn-cxx)}/src/encoding/cryptopp/*.hpp
+
+DIRS += include/ndn-cxx/management
+DIR_CONTENT(include/ndn-cxx/management) := ${DIR(ndn-cxx)}/src/management/*.hpp
+
+DIRS += include/ndn-cxx/security
+DIR_CONTENT(include/ndn-cxx/security) := ${DIR(ndn-cxx)}/src/security/*.hpp
+
+DIRS += include/ndn-cxx/security/conf
+DIR_CONTENT(include/ndn-cxx/security/conf) := ${DIR(ndn-cxx)}/src/security/conf/*.hpp
+
+DIRS += include/ndn-cxx/transport
+DIR_CONTENT(include/ndn-cxx/transport) := ${DIR(ndn-cxx)}/src/transport/*.hpp
+
+DIRS += include/ndn-cxx/util
+DIR_CONTENT(include/ndn-cxx/util) := ${DIR(ndn-cxx)}/src/util/*.hpp
+
+DIRS += include/ndn-cxx/util/regex
+DIR_CONTENT(include/ndn-cxx/util/regex) := ${DIR(ndn-cxx)}/src/util/regex/*.hpp
