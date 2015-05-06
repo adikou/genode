@@ -2,7 +2,7 @@ LICENSE   := LGPL
 VERSION   := 4.7.4
 DOWNLOADS := gcc.archive
 
-URL(gcc) := ftp://ftp.fu-berlin.de/gnu/gcc/gcc-$(VERSION)/gcc-$(VERSION).tar.bz2
+URL(gcc) := https://ftp.gnu.org/gnu/gcc/gcc-4.7.4/gcc-4.7.4.tar.bz2
 SHA(gcc) := f3359a157b3536f289c155363f1736a2c9b414db
 DIR(gcc) := src/lib/stdcxx
 SIG(gcc) := ${URL(gcc)}
@@ -16,6 +16,7 @@ DIR_CONTENT(include/stdcxx) := \
     src/lib/stdcxx/libsupc++/new \
     src/lib/stdcxx/libsupc++/exception \
     src/lib/stdcxx/libsupc++/typeinfo \
+    src/lib/stdcxx/libsupc++/cxxabi.h \
     src/lib/stdcxx/libsupc++/initializer_list
 
 DIRS += include/stdcxx/bits

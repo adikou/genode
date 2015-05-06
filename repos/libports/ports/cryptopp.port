@@ -1,0 +1,10 @@
+LICENSE   := BSD
+VERSION   := 5.6.2
+DOWNLOADS := cryptopp.archive
+
+URL(cryptopp) := http://www.cryptopp.com/cryptopp562.zip
+SHA(cryptopp) := ddc18ae41c2c940317cd6efe81871686846fa293
+DIR(cryptopp) := src/lib/cryptopp
+
+DIRS := include/cryptopp
+DIR_CONTENT(include/cryptopp) := src/lib/cryptopp/*.h

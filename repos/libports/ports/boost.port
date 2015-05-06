@@ -1,0 +1,742 @@
+LICENSE   := BSL
+DOWNLOADS := boost.archive
+VERSION   := 1.58.0
+
+URL(boost)  := http://sourceforge.net/projects/boost/files/boost/1.58.0/boost_1_58_0.zip
+SHA(boost) := 39c4c3bedd96ba191f9ed1ce8a90657d73c79544
+DIR(boost)  := src/lib/boost
+MAIN_DIR	:= ${DIR(boost)}/boost_1_58_0
+
+DIRS := include/boost
+DIR_CONTENT(include/boost) := ${MAIN_DIR}/boost/*.hpp
+DIR_CONTENT(include/boost) += ${MAIN_DIR}/boost/*.h
+
+# Boost.System headers
+
+DIRS += include/boost/system
+DIR_CONTENT(include/boost/system) := ${MAIN_DIR}/boost/system/*.hpp
+
+DIRS += include/boost/system/detail
+DIR_CONTENT(include/boost/system/detail) := ${MAIN_DIR}/boost/system/detail/*.hpp
+
+# Boost.Asio headers and sub-directories
+
+DIRS += include/boost/asio
+DIR_CONTENT(include/boost/asio) := ${MAIN_DIR}/boost/asio/*.hpp
+
+DIRS += include/boost/asio/detail
+DIR_CONTENT(include/boost/asio/detail) := ${MAIN_DIR}/boost/asio/detail/*.hpp
+
+DIRS += include/boost/asio/detail/impl
+DIR_CONTENT(include/boost/asio/detail/impl) := ${MAIN_DIR}/boost/asio/detail/impl/*.hpp
+DIR_CONTENT(include/boost/asio/detail/impl) += ${MAIN_DIR}/boost/asio/detail/impl/*.ipp
+
+DIRS += include/boost/asio/generic
+DIR_CONTENT(include/boost/asio/generic) := ${MAIN_DIR}/boost/asio/generic/*.hpp
+
+DIRS += include/boost/asio/generic/detail
+DIR_CONTENT(include/boost/asio/generic/detail) := ${MAIN_DIR}/boost/asio/generic/detail/*.hpp
+
+DIRS += include/boost/asio/generic/detail/impl
+DIR_CONTENT(include/boost/asio/generic/detail/impl) := ${MAIN_DIR}/boost/asio/generic/detail/impl/endpoint.ipp
+
+DIRS += include/boost/asio/impl
+DIR_CONTENT(include/boost/asio/impl) := ${MAIN_DIR}/boost/asio/impl/*.hpp
+DIR_CONTENT(include/boost/asio/impl) += ${MAIN_DIR}/boost/asio/impl/*.ipp
+
+DIRS += include/boost/asio/ip
+DIR_CONTENT(include/boost/asio/ip) := ${MAIN_DIR}/boost/asio/ip/*.hpp
+
+DIRS += include/boost/asio/ip/detail
+DIR_CONTENT(include/boost/asio/ip/detail) := ${MAIN_DIR}/boost/asio/ip/detail/*.hpp
+
+DIRS += include/boost/asio/ip/detail/impl
+DIR_CONTENT(include/boost/asio/ip/detail/impl) := ${MAIN_DIR}/boost/asio/ip/detail/impl/endpoint.ipp
+
+DIRS += include/boost/asio/ip/impl
+DIR_CONTENT(include/boost/asio/ip/impl) := ${MAIN_DIR}/boost/asio/ip/impl/*.hpp
+DIR_CONTENT(include/boost/asio/ip/impl) += ${MAIN_DIR}/boost/asio/ip/impl/*.ipp
+
+DIRS += include/boost/asio/local
+DIR_CONTENT(include/boost/asio/local) := ${MAIN_DIR}/boost/asio/local/*.hpp
+
+DIRS += include/boost/asio/local/detail
+DIR_CONTENT(include/boost/asio/local/detail) := ${MAIN_DIR}/boost/asio/local/detail/endpoint.hpp
+
+DIRS += include/boost/asio/local/detail/impl
+DIR_CONTENT(include/boost/asio/local/detail/impl) := ${MAIN_DIR}/boost/asio/local/detail/impl/endpoint.ipp
+
+DIRS += include/boost/asio/posix
+DIR_CONTENT(include/boost/asio/posix) := ${MAIN_DIR}/boost/asio/posix/*.hpp
+
+DIRS += include/boost/asio/ssl
+DIR_CONTENT(include/boost/asio/ssl) := ${MAIN_DIR}/boost/asio/ssl/*.hpp
+
+DIRS += include/boost/asio/ssl/detail
+DIR_CONTENT(include/boost/asio/ssl/detail) := ${MAIN_DIR}/boost/asio/ssl/detail/*.hpp
+
+DIRS += include/boost/asio/ssl/detail/impl
+DIR_CONTENT(include/boost/asio/ssl/detail/impl) := ${MAIN_DIR}/boost/asio/ssl/detail/impl/*.ipp
+
+DIRS += include/boost/asio/ssl/impl
+DIR_CONTENT(include/boost/asio/ssl/impl) := ${MAIN_DIR}/boost/asio/ssl/impl/*.hpp
+
+DIRS += include/boost/asio/ssl/impl
+DIR_CONTENT(include/boost/asio/ssl/impl) := ${MAIN_DIR}/boost/asio/ssl/impl/*.ipp
+
+DIRS += include/boost/asio/ssl/old
+DIR_CONTENT(include/boost/asio/ssl/old) := ${MAIN_DIR}/boost/asio/ssl/old/*.hpp
+
+DIRS += include/boost/asio/ssl/old/detail
+DIR_CONTENT(include/boost/asio/ssl/old/detail) := ${MAIN_DIR}/boost/asio/ssl/old/detail/*.hpp
+
+DIRS += include/boost/asio/windows
+DIR_CONTENT(include/boost/asio/windows) := ${MAIN_DIR}/boost/asio/windows/*.hpp
+
+
+# Boost.IOStreams
+
+DIRS += include/boost/iostreams
+DIR_CONTENT(include/boost/iostreams) := ${MAIN_DIR}/boost/iostreams/*.hpp
+
+DIRS += include/boost/iostreams/detail
+DIR_CONTENT(include/boost/iostreams/detail) := ${MAIN_DIR}/boost/iostreams/detail/*.hpp
+
+DIRS += include/boost/iostreams/detail/adapter
+DIR_CONTENT(include/boost/iostreams/detail/adapter) := ${MAIN_DIR}/boost/iostreams/detail/adapter/*.hpp
+
+DIRS += include/boost/iostreams/detail/broken_overload_resolution
+DIR_CONTENT(include/boost/iostreams/detail/broken_overload_resolution) := ${MAIN_DIR}/boost/iostreams/detail/broken_overload_resolution/*.hpp
+
+DIRS += include/boost/iostreams/detail/config
+DIR_CONTENT(include/boost/iostreams/detail/config) := ${MAIN_DIR}/boost/iostreams/detail/config/*.hpp
+
+DIRS += include/boost/iostreams/detail/streambuf
+DIR_CONTENT(include/boost/iostreams/detail/streambuf) := ${MAIN_DIR}/boost/iostreams/detail/streambuf/*.hpp
+
+DIRS += include/boost/iostreams/device
+DIR_CONTENT(include/boost/iostreams/device) := ${MAIN_DIR}/boost/iostreams/device/*.hpp
+
+DIRS += include/boost/iostreams/filter
+DIR_CONTENT(include/boost/iostreams/filter) := ${MAIN_DIR}/boost/iostreams/filter/*.hpp
+
+
+# Boost.Functional
+
+DIRS += include/boost/functional
+DIR_CONTENT(include/boost/functional) := ${MAIN_DIR}/boost/functional/*.hpp
+
+DIRS += include/boost/functional/hash
+DIR_CONTENT(include/boost/functional/hash) := ${MAIN_DIR}/boost/functional/hash/*.hpp
+
+DIRS += include/boost/functional/hash/detail
+DIR_CONTENT(include/boost/functional/hash/detail) := ${MAIN_DIR}/boost/functional/hash/detail/*.hpp
+
+DIRS += include/boost/functional/overloaded_function
+DIR_CONTENT(include/boost/functional/overloaded_function) := ${MAIN_DIR}/boost/functional/overloaded_function/*.hpp
+
+DIRS += include/boost/functional/overloaded_function/detail
+DIR_CONTENT(include/boost/functional/overloaded_function/detail) := ${MAIN_DIR}/boost/functional/overloaded_function/detail/*.hpp
+
+# Boost.Algorithmm
+
+DIRS += include/boost/algorithm
+DIR_CONTENT(include/boost/algorithm) := ${MAIN_DIR}/boost/algorithm/*.hpp
+
+DIRS += include/boost/algorithm/string
+DIR_CONTENT(include/boost/algorithm/string) := ${MAIN_DIR}/boost/algorithm/string/*.hpp
+
+DIRS += include/boost/algorithm/string/std
+DIR_CONTENT(include/boost/algorithm/string/std) := ${MAIN_DIR}/boost/algorithm/string/std/*.hpp
+
+DIRS += include/boost/algorithm/string/detail
+DIR_CONTENT(include/boost/algorithm/string/detail) := ${MAIN_DIR}/boost/algorithm/string/detail/*.hpp
+
+# Boost.Property_Tree
+
+DIRS += include/boost/property_tree
+DIR_CONTENT(include/boost/property_tree) := ${MAIN_DIR}/boost/property_tree/*.hpp
+
+DIRS += include/boost/property_tree/detail
+DIR_CONTENT(include/boost/property_tree/detail) := ${MAIN_DIR}/boost/property_tree/detail/*.hpp
+
+# Boost.Date_Time
+
+DIRS += include/boost/date_time
+DIR_CONTENT(include/boost/date_time) := ${MAIN_DIR}/boost/date_time/*.hpp
+DIR_CONTENT(include/boost/date_time) += ${MAIN_DIR}/boost/date_time/*.ipp
+
+DIRS += include/boost/date_time/gregorian
+DIR_CONTENT(include/boost/date_time/gregorian) := ${MAIN_DIR}/boost/date_time/gregorian/*.hpp
+
+DIRS += include/boost/date_time/local_time
+DIR_CONTENT(include/boost/date_time/local_time) := ${MAIN_DIR}/boost/date_time/local_time/*.hpp
+
+DIRS += include/boost/date_time/posix_time
+DIR_CONTENT(include/boost/date_time/posix_time) := ${MAIN_DIR}/boost/date_time/posix_time/*.hpp
+
+# Boost.Iterator
+
+DIRS += include/boost/iterator
+DIR_CONTENT(include/boost/iterator) := ${MAIN_DIR}/boost/iterator/*.hpp
+
+DIRS += include/boost/iterator/detail
+DIR_CONTENT(include/boost/iterator/detail) := ${MAIN_DIR}/boost/iterator/detail/*.hpp
+
+# Boost.Random
+
+DIRS += include/boost/random
+DIR_CONTENT(include/boost/random) := ${MAIN_DIR}/boost/random/*.hpp
+
+DIRS += include/boost/random/detail
+DIR_CONTENT(include/boost/random/detail) := ${MAIN_DIR}/boost/random/detail/*.hpp
+
+# Boost.Multi_Index
+
+DIRS += include/boost/multi_index
+DIR_CONTENT(include/boost/multi_index) := ${MAIN_DIR}/boost/multi_index/*.hpp
+
+DIRS += include/boost/multi_index/detail
+DIR_CONTENT(include/boost/multi_index/detail) := ${MAIN_DIR}/boost/multi_index/detail/*.hpp
+
+# Boost.Mpl
+# This is where I got bored of pasting hpp's 
+# Just adding whatever is being included in NDN
+
+DIRS += include/boost/mpl
+DIR_CONTENT(include/boost/mpl) := ${MAIN_DIR}/boost/mpl/*.hpp
+
+DIRS += include/boost/mpl/aux_
+DIR_CONTENT(include/boost/mpl/aux_) := ${MAIN_DIR}/boost/mpl/aux_/*.hpp
+
+DIRS += include/boost/mpl/aux_/config
+DIR_CONTENT(include/boost/mpl/aux_/config) := ${MAIN_DIR}/boost/mpl/aux_/config/*.hpp
+
+DIRS += include/boost/mpl/aux_/preprocessor
+DIR_CONTENT(include/boost/mpl/aux_/preprocessor) := ${MAIN_DIR}/boost/mpl/aux_/preprocessor/*.hpp
+
+DIRS += include/boost/mpl/aux_/preprocessed/gcc
+DIR_CONTENT(include/boost/mpl/aux_/preprocessed/gcc) := ${MAIN_DIR}/boost/mpl/aux_/preprocessed/gcc/*.hpp
+
+DIRS += include/boost/mpl/vector
+DIR_CONTENT(include/boost/mpl/vector) := ${MAIN_DIR}/boost/mpl/vector/*.hpp
+
+DIRS += include/boost/mpl/vector/aux_
+DIR_CONTENT(include/boost/mpl/vector/aux_) := ${MAIN_DIR}/boost/mpl/vector/aux_/*.hpp
+
+DIRS += include/boost/mpl/vector/aux_/preprocessed/typeof_based
+DIR_CONTENT(include/boost/mpl/vector/aux_/preprocessed/typeof_based) := ${MAIN_DIR}/boost/mpl/vector/aux_/preprocessed/typeof_based/*.hpp
+
+DIRS += include/boost/mpl/limits
+DIR_CONTENT(include/boost/mpl/limits) := ${MAIN_DIR}/boost/mpl/limits/*.hpp
+
+DIRS += include/boost/mpl/list
+DIR_CONTENT(include/boost/mpl/list) := ${MAIN_DIR}/boost/mpl/list/*.hpp
+
+DIRS += include/boost/mpl/list/aux_
+DIR_CONTENT(include/boost/mpl/list/aux_) := ${MAIN_DIR}/boost/mpl/list/aux_/*.hpp
+
+DIRS += include/boost/mpl/list/aux_/preprocessed/plain
+DIR_CONTENT(include/boost/mpl/list/aux_/preprocessed/plain) := ${MAIN_DIR}/boost/mpl/list/aux_/preprocessed/plain/*.hpp
+
+DIRS += include/boost/mpl/set
+DIR_CONTENT(include/boost/mpl/set) := ${MAIN_DIR}/boost/mpl/set/*.hpp
+
+DIRS += include/boost/mpl/set/aux_
+DIR_CONTENT(include/boost/mpl/set/aux_) := ${MAIN_DIR}/boost/mpl/set/aux_/*.hpp
+
+DIRS += include/boost/mpl/set/aux_/preprocessed/plain
+DIR_CONTENT(include/boost/mpl/set/aux_/preprocessed/plain) := ${MAIN_DIR}/boost/mpl/set/aux_/preprocessed/plain/*.hpp
+
+
+# Boost.Concept
+
+DIRS += include/boost/concept
+DIR_CONTENT(include/boost/concept) := ${MAIN_DIR}/boost/concept/*.hpp
+
+DIRS += include/boost/concept/detail
+DIR_CONTENT(include/boost/concept/detail) := ${MAIN_DIR}/boost/concept/detail/*.hpp
+
+
+# Boost.Range
+
+DIRS += include/boost/range
+DIR_CONTENT(include/boost/range) := ${MAIN_DIR}/boost/range/*.hpp
+
+DIRS += include/boost/range/adaptor
+DIR_CONTENT(include/boost/range/adaptor) := ${MAIN_DIR}/boost/range/adaptor/*.hpp
+
+DIRS += include/boost/range/algorithm
+DIR_CONTENT(include/boost/range/algorithm) := ${MAIN_DIR}/boost/range/algorithm/*.hpp
+
+DIRS += include/boost/range/algorithm_ext
+DIR_CONTENT(include/boost/range/algorithm_ext) := ${MAIN_DIR}/boost/range/algorithm_ext/*.hpp
+
+DIRS += include/boost/range/detail
+DIR_CONTENT(include/boost/range/detail) := ${MAIN_DIR}/boost/range/detail/*.hpp
+
+# Boost.Tuple
+
+DIRS += include/boost/tuple
+DIR_CONTENT(include/boost/tuple) := ${MAIN_DIR}/boost/tuple/*.hpp
+
+DIRS += include/boost/tuple/detail
+DIR_CONTENT(include/boost/tuple/detail) := ${MAIN_DIR}/boost/tuple/detail/*.hpp
+
+# Boost.Test
+
+DIRS += include/boost/test
+DIR_CONTENT(include/boost/test) := ${MAIN_DIR}/boost/test/*.hpp
+
+# Boost.Exception
+
+DIRS += include/boost/exception
+DIR_CONTENT(include/boost/exception) := ${MAIN_DIR}/boost/exception/*.hpp
+
+DIRS += include/boost/exception/detail
+DIR_CONTENT(include/boost/exception/detail) := ${MAIN_DIR}/boost/exception/detail/*.hpp
+
+# Boost.Program_Options
+
+DIRS += include/boost/program_options
+DIR_CONTENT(include/boost/program_options) := ${MAIN_DIR}/boost/program_options/*.hpp
+
+DIRS += include/boost/program_options/detail
+DIR_CONTENT(include/boost/program_options/detail) := ${MAIN_DIR}/boost/program_options/detail/*.hpp
+
+# Boost.Thread
+
+DIRS += include/boost/thread
+DIR_CONTENT(include/boost/thread) := ${MAIN_DIR}/boost/thread/*.hpp
+
+DIRS += include/boost/thread/pthread
+DIR_CONTENT(include/boost/thread/pthread) := ${MAIN_DIR}/boost/thread/pthread/*.hpp
+
+DIRS += include/boost/thread/detail
+DIR_CONTENT(include/boost/thread/detail) := ${MAIN_DIR}/boost/thread/detail/*.hpp
+
+DIRS += include/boost/thread/csbl
+DIR_CONTENT(include/boost/thread/csbl) := ${MAIN_DIR}/boost/thread/csbl/*.hpp
+
+DIRS += include/boost/thread/csbl/memory
+DIR_CONTENT(include/boost/thread/csbl/memory) := ${MAIN_DIR}/boost/thread/csbl/memory/*.hpp
+
+# Boost.Chrono
+
+DIRS += include/boost/chrono
+DIR_CONTENT(include/boost/chrono) := ${MAIN_DIR}/boost/chrono/*.hpp
+
+DIRS += include/boost/chrono/detail
+DIR_CONTENT(include/boost/chrono/detail) := ${MAIN_DIR}/boost/chrono/detail/*.hpp
+
+DIRS += include/boost/chrono/detail/inlined
+DIR_CONTENT(include/boost/chrono/detail/inlined) := ${MAIN_DIR}/boost/chrono/detail/inlined/*.hpp
+
+DIRS += include/boost/chrono/detail/inlined/posix
+DIR_CONTENT(include/boost/chrono/detail/inlined/posix) := ${MAIN_DIR}/boost/chrono/detail/inlined/posix/*.hpp
+
+DIRS += include/boost/chrono/detail/no_warning
+DIR_CONTENT(include/boost/chrono/detail/no_warning) := ${MAIN_DIR}/boost/chrono/detail/no_warning/*.hpp
+
+DIRS += include/boost/chrono/io
+DIR_CONTENT(include/boost/chrono/io) := ${MAIN_DIR}/boost/chrono/io/*.hpp
+
+DIRS += include/boost/chrono/io/utility
+DIR_CONTENT(include/boost/chrono/io/utility) := ${MAIN_DIR}/boost/chrono/io/utility/*.hpp
+
+DIRS += include/boost/chrono/io_v1
+DIR_CONTENT(include/boost/chrono/io_v1) := ${MAIN_DIR}/boost/chrono/io_v1/*.hpp
+
+DIRS += include/boost/chrono/io_v1
+DIR_CONTENT(include/boost/chrono/io_v1) := ${MAIN_DIR}/boost/chrono/io_v1/*.hpp
+
+DIRS += include/boost/chrono/typeof/boost
+DIR_CONTENT(include/boost/chrono/typeof/boost) := ${MAIN_DIR}/boost/chrono/typeof/boost/*.hpp
+
+DIRS += include/boost/chrono/typeof/boost/chrono
+DIR_CONTENT(include/boost/chrono/typeof/boost/chrono) := ${MAIN_DIR}/boost/chrono/typeof/boost/chrono/*.hpp
+
+# Boost.Filesystem
+
+DIRS += include/boost/filesystem
+DIR_CONTENT(include/boost/filesystem) := ${MAIN_DIR}/boost/filesystem/*.hpp
+
+DIRS += include/boost/filesystem/detail
+DIR_CONTENT(include/boost/filesystem/detail) := ${MAIN_DIR}/boost/filesystem/detail/*.hpp
+
+# Boost.Regex
+
+DIRS += include/boost/regex
+DIR_CONTENT(include/boost/regex) := ${MAIN_DIR}/boost/regex/*.hpp
+
+DIRS += include/boost/regex/config
+DIR_CONTENT(include/boost/regex/config) := ${MAIN_DIR}/boost/regex/config/*.hpp
+
+DIRS += include/boost/regex/pending
+DIR_CONTENT(include/boost/regex/pending) := ${MAIN_DIR}/boost/regex/pending/*.hpp
+
+DIRS += include/boost/regex/v4
+DIR_CONTENT(include/boost/regex/v4) := ${MAIN_DIR}/boost/regex/v4/*.hpp
+
+# Based on dependencies in ndn-cxx compilation, more includes will be added
+
+# Boost.Config
+
+DIRS += include/boost/config
+DIR_CONTENT(include/boost/config) := ${MAIN_DIR}/boost/config/*.hpp
+
+DIRS += include/boost/config/abi
+DIR_CONTENT(include/boost/config/abi) := ${MAIN_DIR}/boost/config/abi/*.hpp
+
+DIRS += include/boost/config/compiler
+DIR_CONTENT(include/boost/config/compiler) := ${MAIN_DIR}/boost/config/compiler/*.hpp
+
+DIRS += include/boost/config/no_tr1
+DIR_CONTENT(include/boost/config/no_tr1) := ${MAIN_DIR}/boost/config/no_tr1/*.hpp
+
+DIRS += include/boost/config/platform
+DIR_CONTENT(include/boost/config/platform) := ${MAIN_DIR}/boost/config/platform/*.hpp
+
+DIRS += include/boost/config/stdlib
+DIR_CONTENT(include/boost/config/stdlib) := ${MAIN_DIR}/boost/config/stdlib/*.hpp
+
+# Boost.Detail
+
+DIRS += include/boost/detail
+DIR_CONTENT(include/boost/detail) := ${MAIN_DIR}/boost/detail/*.hpp
+
+# Boost.Preprocessor
+
+DIRS += include/boost/preprocessor
+DIR_CONTENT(include/boost/preprocessor) := ${MAIN_DIR}/boost/preprocessor/*.hpp
+
+DIRS += include/boost/preprocessor/config
+DIR_CONTENT(include/boost/preprocessor/config) := ${MAIN_DIR}/boost/preprocessor/config/*.hpp
+
+DIRS += include/boost/preprocessor/punctuation
+DIR_CONTENT(include/boost/preprocessor/punctuation) := ${MAIN_DIR}/boost/preprocessor/punctuation/*.hpp
+
+DIRS += include/boost/preprocessor/control
+DIR_CONTENT(include/boost/preprocessor/control) := ${MAIN_DIR}/boost/preprocessor/control/*.hpp
+
+DIRS += include/boost/preprocessor/control/detail
+DIR_CONTENT(include/boost/preprocessor/control/detail) := ${MAIN_DIR}/boost/preprocessor/control/detail/*.hpp
+
+DIRS += include/boost/preprocessor/logical
+DIR_CONTENT(include/boost/preprocessor/logical) := ${MAIN_DIR}/boost/preprocessor/logical/*.hpp
+
+DIRS += include/boost/preprocessor/facilities
+DIR_CONTENT(include/boost/preprocessor/facilities) := ${MAIN_DIR}/boost/preprocessor/facilities/*.hpp
+
+DIRS += include/boost/preprocessor/repetition
+DIR_CONTENT(include/boost/preprocessor/repetition) := ${MAIN_DIR}/boost/preprocessor/repetition/*.hpp
+
+DIRS += include/boost/preprocessor/repetition/detail
+DIR_CONTENT(include/boost/preprocessor/repetition/detail) := ${MAIN_DIR}/boost/preprocessor/repetition/detail/*.hpp
+
+DIRS += include/boost/preprocessor/debug
+DIR_CONTENT(include/boost/preprocessor/debug) := ${MAIN_DIR}/boost/preprocessor/debug/*.hpp
+
+DIRS += include/boost/preprocessor/detail
+DIR_CONTENT(include/boost/preprocessor/detail) := ${MAIN_DIR}/boost/preprocessor/detail/*.hpp
+
+DIRS += include/boost/preprocessor/arithmetic
+DIR_CONTENT(include/boost/preprocessor/arithmetic) := ${MAIN_DIR}/boost/preprocessor/arithmetic/*.hpp
+
+DIRS += include/boost/preprocessor/arithmetic/detail
+DIR_CONTENT(include/boost/preprocessor/arithmetic/detail) := ${MAIN_DIR}/boost/preprocessor/arithmetic/detail/*.hpp
+
+DIRS += include/boost/preprocessor/array
+DIR_CONTENT(include/boost/preprocessor/array) := ${MAIN_DIR}/boost/preprocessor/array/*.hpp
+
+DIRS += include/boost/preprocessor/comparison
+DIR_CONTENT(include/boost/preprocessor/comparison) := ${MAIN_DIR}/boost/preprocessor/comparison/*.hpp
+
+DIRS += include/boost/preprocessor/iteration
+DIR_CONTENT(include/boost/preprocessor/iteration) := ${MAIN_DIR}/boost/preprocessor/iteration/*.hpp
+
+DIRS += include/boost/preprocessor/iteration/detail
+DIR_CONTENT(include/boost/preprocessor/iteration/detail) := ${MAIN_DIR}/boost/preprocessor/iteration/detail/*.hpp
+
+DIRS += include/boost/preprocessor/iteration/detail/bounds
+DIR_CONTENT(include/boost/preprocessor/iteration/detail/bounds) := ${MAIN_DIR}/boost/preprocessor/iteration/detail/bounds/*.hpp
+
+DIRS += include/boost/preprocessor/iteration/detail/iter
+DIR_CONTENT(include/boost/preprocessor/iteration/detail/iter) := ${MAIN_DIR}/boost/preprocessor/iteration/detail/iter/*.hpp
+
+DIRS += include/boost/preprocessor/list
+DIR_CONTENT(include/boost/preprocessor/list) := ${MAIN_DIR}/boost/preprocessor/list/*.hpp
+
+DIRS += include/boost/preprocessor/list/detail
+DIR_CONTENT(include/boost/preprocessor/list/detail) := ${MAIN_DIR}/boost/preprocessor/list/detail/*.hpp
+
+DIRS += include/boost/preprocessor/selection
+DIR_CONTENT(include/boost/preprocessor/selection) := ${MAIN_DIR}/boost/preprocessor/selection/*.hpp
+
+DIRS += include/boost/preprocessor/seq
+DIR_CONTENT(include/boost/preprocessor/seq) := ${MAIN_DIR}/boost/preprocessor/seq/*.hpp
+
+DIRS += include/boost/preprocessor/slot
+DIR_CONTENT(include/boost/preprocessor/slot) := ${MAIN_DIR}/boost/preprocessor/slot/*.hpp
+
+DIRS += include/boost/preprocessor/slot/detail
+DIR_CONTENT(include/boost/preprocessor/slot/detail) := ${MAIN_DIR}/boost/preprocessor/slot/detail/*.hpp
+
+DIRS += include/boost/preprocessor/tuple
+DIR_CONTENT(include/boost/preprocessor/tuple) := ${MAIN_DIR}/boost/preprocessor/tuple/*.hpp
+
+DIRS += include/boost/preprocessor/tuple/detail
+DIR_CONTENT(include/boost/preprocessor/tuple/detail) := ${MAIN_DIR}/boost/preprocessor/tuple/detail/*.hpp
+
+DIRS += include/boost/preprocessor/variadic
+DIR_CONTENT(include/boost/preprocessor/variadic) := ${MAIN_DIR}/boost/preprocessor/variadic/*.hpp
+
+# End of preprocessor - hopefully
+
+# Boost.Type_Traits
+
+DIRS += include/boost/type_traits
+DIR_CONTENT(include/boost/type_traits) := ${MAIN_DIR}/boost/type_traits/*.hpp
+
+DIRS += include/boost/type_traits/detail
+DIR_CONTENT(include/boost/type_traits/detail) := ${MAIN_DIR}/boost/type_traits/detail/*.hpp
+
+# Boost.Utility
+
+DIRS += include/boost/utility
+DIR_CONTENT(include/boost/utility) := ${MAIN_DIR}/boost/utility/*.hpp
+
+DIRS += include/boost/utility/detail
+DIR_CONTENT(include/boost/utility/detail) := ${MAIN_DIR}/boost/utility/detail/*.hpp
+
+
+#Boost.Core
+
+DIRS += include/boost/core
+DIR_CONTENT(include/boost/core) := ${MAIN_DIR}/boost/core/*.hpp
+
+# Boost.Predef
+
+DIRS += include/boost/predef
+DIR_CONTENT(include/boost/predef) := ${MAIN_DIR}/boost/predef/*.h
+
+DIRS += include/boost/predef/language
+DIR_CONTENT(include/boost/predef/language) := ${MAIN_DIR}/boost/predef/language/*.h
+
+DIRS += include/boost/predef/architecture
+DIR_CONTENT(include/boost/predef/architecture) := ${MAIN_DIR}/boost/predef/architecture/*.h
+
+DIRS += include/boost/predef/architecture/x86
+DIR_CONTENT(include/boost/predef/architecture/x86) := ${MAIN_DIR}/boost/predef/architecture/x86/*.h
+
+DIRS += include/boost/predef/compiler
+DIR_CONTENT(include/boost/predef/compiler) := ${MAIN_DIR}/boost/predef/compiler/*.h
+
+DIRS += include/boost/predef/detail
+DIR_CONTENT(include/boost/predef/detail) := ${MAIN_DIR}/boost/predef/detail/*.h
+
+DIRS += include/boost/predef/library
+DIR_CONTENT(include/boost/predef/library) := ${MAIN_DIR}/boost/predef/library/*.h
+
+DIRS += include/boost/predef/library/c
+DIR_CONTENT(include/boost/predef/library/c) := ${MAIN_DIR}/boost/predef/library/c/*.h
+
+DIRS += include/boost/predef/library/std
+DIR_CONTENT(include/boost/predef/library/std) := ${MAIN_DIR}/boost/predef/library/std/*.h
+
+DIRS += include/boost/predef/os
+DIR_CONTENT(include/boost/predef/os) := ${MAIN_DIR}/boost/predef/os/*.h
+
+DIRS += include/boost/predef/os/bsd
+DIR_CONTENT(include/boost/predef/os/bsd) := ${MAIN_DIR}/boost/predef/os/bsd/*.h
+
+DIRS += include/boost/predef/other
+DIR_CONTENT(include/boost/predef/other) := ${MAIN_DIR}/boost/predef/other/*.h
+
+DIRS += include/boost/predef/platform
+DIR_CONTENT(include/boost/predef/platform) := ${MAIN_DIR}/boost/predef/platform/*.h
+
+
+# Boost.Ratio
+
+DIRS += include/boost/ratio
+DIR_CONTENT(include/boost/ratio) := ${MAIN_DIR}/boost/ratio/*.hpp
+
+DIRS += include/boost/ratio/detail
+DIR_CONTENT(include/boost/ratio/detail) := ${MAIN_DIR}/boost/ratio/detail/*.hpp
+
+DIRS += include/boost/ratio/detail/mpl
+DIR_CONTENT(include/boost/ratio/detail/mpl) := ${MAIN_DIR}/boost/ratio/detail/mpl/*.hpp
+
+DIRS += include/boost/ratio/mpl
+DIR_CONTENT(include/boost/ratio/mpl) := ${MAIN_DIR}/boost/ratio/mpl/*.hpp
+
+# Boost.Integer
+
+DIRS += include/boost/integer
+DIR_CONTENT(include/boost/integer) := ${MAIN_DIR}/boost/integer/*.hpp
+
+# Boost.Move
+
+DIRS += include/boost/move
+DIR_CONTENT(include/boost/move) := ${MAIN_DIR}/boost/move/*.hpp
+
+DIRS += include/boost/move/detail
+DIR_CONTENT(include/boost/move/detail) := ${MAIN_DIR}/boost/move/detail/*.hpp
+
+# Boost.Smart_ptr
+
+DIRS += include/boost/smart_ptr
+DIR_CONTENT(include/boost/smart_ptr) := ${MAIN_DIR}/boost/smart_ptr/*.hpp
+
+DIRS += include/boost/smart_ptr/detail
+DIR_CONTENT(include/boost/smart_ptr/detail) := ${MAIN_DIR}/boost/smart_ptr/detail/*.hpp
+
+# Boost.Lexical_Cast
+
+DIRS += include/boost/lexical_cast
+DIR_CONTENT(include/boost/lexical_cast) := ${MAIN_DIR}/boost/lexical_cast/*.hpp
+
+DIRS += include/boost/lexical_cast/detail
+DIR_CONTENT(include/boost/lexical_cast/detail) := ${MAIN_DIR}/boost/lexical_cast/detail/*.hpp
+
+# Boost.Numeric
+
+DIRS += include/boost/numeric
+DIR_CONTENT(include/boost/numeric) := ${MAIN_DIR}/boost/numeric/*.hpp
+
+DIRS += include/boost/numeric/conversion
+DIR_CONTENT(include/boost/numeric/conversion) := ${MAIN_DIR}/boost/numeric/conversion/*.hpp
+
+DIRS += include/boost/numeric/conversion/detail
+DIR_CONTENT(include/boost/numeric/conversion/detail) := ${MAIN_DIR}/boost/numeric/conversion/detail/*.hpp
+
+DIRS += include/boost/numeric/conversion/detail/preprocessed
+DIR_CONTENT(include/boost/numeric/conversion/detail/preprocessed) := ${MAIN_DIR}/boost/numeric/conversion/detail/preprocessed/*.hpp
+
+DIRS += include/boost/numeric/interval
+DIR_CONTENT(include/boost/numeric/interval) := ${MAIN_DIR}/boost/numeric/interval/*.hpp
+
+DIRS += include/boost/numeric/interval/compare
+DIR_CONTENT(include/boost/numeric/interval/compare) := ${MAIN_DIR}/boost/numeric/interval/compare/*.hpp
+
+DIRS += include/boost/numeric/interval/detail
+DIR_CONTENT(include/boost/numeric/interval/detail) := ${MAIN_DIR}/boost/numeric/interval/detail/*.hpp
+
+DIRS += include/boost/numeric/interval/ext
+DIR_CONTENT(include/boost/numeric/interval/ext) := ${MAIN_DIR}/boost/numeric/interval/ext/*.hpp
+
+DIRS += include/boost/numeric/odeint
+DIR_CONTENT(include/boost/numeric/odeint) := ${MAIN_DIR}/boost/numeric/odeint/*.hpp
+
+DIRS += include/boost/numeric/odeint/algebra
+DIR_CONTENT(include/boost/numeric/odeint/algebra) := ${MAIN_DIR}/boost/numeric/odeint/algebra/*.hpp
+
+DIRS += include/boost/numeric/odeint/algebra/detail
+DIR_CONTENT(include/boost/numeric/odeint/algebra/detail) := ${MAIN_DIR}/boost/numeric/odeint/algebra/detail/*.hpp
+
+
+# Boost.Container
+
+DIRS += include/boost/container
+DIR_CONTENT(include/boost/container) := ${MAIN_DIR}/boost/container/*.hpp
+
+DIRS += include/boost/container/detail
+DIR_CONTENT(include/boost/container/detail) := ${MAIN_DIR}/boost/container/detail/*.hpp
+
+# Boost.Math
+
+DIRS += include/boost/math
+DIR_CONTENT(include/boost/math) := ${MAIN_DIR}/boost/math/*.hpp
+
+DIRS += include/boost/math/special_functions
+DIR_CONTENT(include/boost/math/special_functions) := ${MAIN_DIR}/boost/math/special_functions/*.hpp
+
+DIRS += include/boost/math/special_functions/detail
+DIR_CONTENT(include/boost/math/special_functions/detail) := ${MAIN_DIR}/boost/math/special_functions/detail/*.hpp
+
+DIRS += include/boost/math/tools
+DIR_CONTENT(include/boost/math/tools) := ${MAIN_DIR}/boost/math/tools/*.hpp
+
+DIRS += include/boost/math/tools/detail
+DIR_CONTENT(include/boost/math/tools/detail) := ${MAIN_DIR}/boost/math/tools/detail/*.hpp
+
+DIRS += include/boost/math/policies
+DIR_CONTENT(include/boost/math/policies) := ${MAIN_DIR}/boost/math/policies/*.hpp
+
+# Boost.Format
+
+DIRS += include/boost/format
+DIR_CONTENT(include/boost/format) := ${MAIN_DIR}/boost/format/*.hpp
+
+DIRS += include/boost/format/detail
+DIR_CONTENT(include/boost/format/detail) := ${MAIN_DIR}/boost/format/detail/*.hpp
+
+
+# Boost.Optional
+
+DIRS += include/boost/optional
+DIR_CONTENT(include/boost/optional) := ${MAIN_DIR}/boost/optional/*.hpp
+
+
+# Boost.Bind
+DIRS += include/boost/bind
+DIR_CONTENT(include/boost/bind) := ${MAIN_DIR}/boost/bind/*.hpp
+
+
+# Boost.Type_Index
+DIRS += include/boost/type_index
+DIR_CONTENT(include/boost/type_index) := ${MAIN_DIR}/boost/type_index/*.hpp
+
+DIRS += include/boost/type_index/detail
+DIR_CONTENT(include/boost/type_index/detail) := ${MAIN_DIR}/boost/type_index/detail/*.hpp
+
+
+# Boost.Archive
+DIRS += include/boost/archive
+DIR_CONTENT(include/boost/archive) := ${MAIN_DIR}/boost/archive/*.hpp
+
+DIRS += include/boost/archive
+DIR_CONTENT(include/boost/archive) := ${MAIN_DIR}/boost/archive/*.hpp
+
+DIRS += include/boost/archive/detail
+DIR_CONTENT(include/boost/archive/detail) := ${MAIN_DIR}/boost/archive/detail/*.hpp
+
+DIRS += include/boost/archive/impl
+DIR_CONTENT(include/boost/archive/impl) := ${MAIN_DIR}/boost/archive/impl/*.hpp
+
+DIRS += include/boost/archive/iterators
+DIR_CONTENT(include/boost/archive/iterators) := ${MAIN_DIR}/boost/archive/iterators/*.hpp
+
+# Boost.Serialization
+
+DIRS += include/boost/serialization
+DIR_CONTENT(include/boost/serialization) := ${MAIN_DIR}/boost/serialization/*.hpp
+
+DIRS += include/boost/serialization/detail
+DIR_CONTENT(include/boost/serialization/detail) := ${MAIN_DIR}/boost/serialization/detail/*.hpp
+
+# Boost.IO
+
+DIRS += include/boost/io
+DIR_CONTENT(include/boost/io) := ${MAIN_DIR}/boost/io/*.hpp
+
+DIRS += include/boost/io/detail
+DIR_CONTENT(include/boost/io/detail) := ${MAIN_DIR}/boost/io/detail/*.hpp
+
+# Boost.Function
+
+DIRS += include/boost/function
+DIR_CONTENT(include/boost/function) := ${MAIN_DIR}/boost/function/*.hpp
+
+
+DIRS += include/boost/function/detail
+DIR_CONTENT(include/boost/function/detail) := ${MAIN_DIR}/boost/function/detail/*.hpp
+
+# Boost.Pending
+
+DIRS += include/boost/pending
+DIR_CONTENT(include/boost/pending) := ${MAIN_DIR}/boost/pending/*.hpp
+
+DIRS += include/boost/pending/detail
+DIR_CONTENT(include/boost/pending/detail) := ${MAIN_DIR}/boost/pending/detail/*.hpp
