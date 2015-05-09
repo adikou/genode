@@ -18,6 +18,7 @@ DIR_CONTENT(include/boost/system) := ${MAIN_DIR}/boost/system/*.hpp
 
 DIRS += include/boost/system/detail
 DIR_CONTENT(include/boost/system/detail) := ${MAIN_DIR}/boost/system/detail/*.hpp
+DIR_CONTENT(include/boost/system/detail) += ${MAIN_DIR}/boost/system/detail/*.ipp
 
 # Boost.Asio headers and sub-directories
 
@@ -404,6 +405,7 @@ DIR_CONTENT(include/boost/config/stdlib) := ${MAIN_DIR}/boost/config/stdlib/*.hp
 
 DIRS += include/boost/detail
 DIR_CONTENT(include/boost/detail) := ${MAIN_DIR}/boost/detail/*.hpp
+DIR_CONTENT(include/boost/detail) += ${MAIN_DIR}/boost/detail/*.ipp
 
 # Boost.Preprocessor
 

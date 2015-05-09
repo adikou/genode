@@ -1,0 +1,21 @@
+#ifndef _NDN_CXX_CONFIG_H
+#define _NDN_CXX_CONFIG_H
+
+/* @author - Aditya Kousik  
+ * Hack - 05/06/2015
+ * Copy ndn-cxx-config.hpp to ndn-cxx/src
+ */
+
+#define NDN_CXX_HAVE_IS_DEFAULT_CONSTRUCTIBLE 1
+#define NDN_CXX_HAVE_IS_MOVE_CONSTRUCTIBLE 1
+#define NDN_CXX_HAVE_IS_MOVE_ASSIGNABLE 1
+#define NDN_CXX_HAVE_CXX_FRIEND_TYPENAME 1
+#define NDN_CXX_HAVE_CXX_OVERRIDE_FINAL 1
+#define NDN_CXX_HAVE_PTHREAD 1
+#define NDN_CXX_HAVE_RT 1
+#define NDN_CXX_HAVE_GETPASS 1
+#define NDN_CXX_HAVE_RTNETLINK 1
+#define NDN_CXX_HAVE_SQLITE3 1
+#define NDN_CXX_HAVE_CRYPTOPP_CONFIG_H 1
+
+#endif /* _NDN_CXX_CONFIG_H */
